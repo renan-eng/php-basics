@@ -1,8 +1,12 @@
-
 <?php     
 //Start the session
 session_start();
-      
+$_SESSION["favcolor"] = "verde";
+$_SESSION["favanimal"] = "gato";   
+
+function darEcho(){
+  echo "Variáveis de sessão inicializadas.";
+}
 ?>
 
 <!DOCTYPE html>
@@ -25,9 +29,8 @@ session_start();
     // Maintaining state
     // PHP Sessions são rastreadas atraves dos arquivos chamdos cookies
     // Sessão são arays associativos com pares Key,Values
-    $_SESSION["favcolor"] = "verde";
-    $_SESSION["favanimal"] = "gato";
-    echo "Variáveis de sessão inicializadas.";
+
+    darEcho();
     
   ?>
   <br>

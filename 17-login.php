@@ -1,4 +1,3 @@
-
 <?php     
 //Start the session
 session_start();
@@ -34,8 +33,7 @@ session_start();
 <?php 
 //Verifica se o usuário está logado
 if(isset($_SESSION['estaLogado'])){
-    echo "<p>Você já está logado!<p>";
-    echo $oFormulario;
+    echo "<p>Você já está logado!<p>";    
 } else {
 //usandoo Heredoc, para exibir o formulário atraves de um echo
 $oFormulario = <<<THERFORM
@@ -72,8 +70,6 @@ echo $oFormulario;
 
 
 </main>
-
-
 
 </body>
 
