@@ -43,18 +43,20 @@
         die("Connection failed: ".$conn->connect_error);
     }
 
+    //CRUD = CREATE, READ, UPDATE, DELETE
+
     $sql = "SELECT * FROM people";
-    $result = $conn->query($sql);
+    $result = $conn->query($sql); //utilizando o objeto $conn->query enviamos o comando SELECT * FROM people (seleciona tudo da tabela 'people')
 
     if($result->num_rows > 0){
-        //exibe toda a infomação das colunas na tabela
+        //exibe toda a infomação de cada coluna na tabela
         while($row = $result->fetch_assoc()){
             echo "Id: ".$row["id"]." - Name: ".$row["name"]."<br>";
         }
     } else {
         echo "0 results";
     }
-    $conn->close();
+    $conn->close(); //fecha conexão com o banco de dados.
     ?> 
 </div>
 
